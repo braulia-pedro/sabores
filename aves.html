@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <title>Aves</title>
+    <link href="css/estilo.css" rel="stylesheet" type="text/css">
+    <link href="css/banner.css" rel="stylesheet" type="text/css">
+    <link href="css/footer.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Estilos específicos para o layout das receitas */
+        .receita {
+            display: none; /* Inicialmente oculta todas as receitas */
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+        .receita img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="cabecalho">
+            <div>
+                <img id="logotipo" src="images/sopas.webp" alt="logotipo">
+            </div>
+
+            <div id="divBusca">
+                <input type="text" id="txtBusca" placeholder="Procure uma receita..."/>
+                <button type="submit" id="btnBusca">Procurar</button>
+            </div>
+        </div>
+     
+        <div id="cabecalho2">
+            <div id="menu">
+                <ul>
+                    <li><a href="bolos-e-tortas.html">bolos e tortas</a></li> 
+                    <li><a href="carnes.html">carnes</a></li> 
+                    <li><a href="aves.html">aves</a></li> 
+                    <li><a href="doces-e-sobremesas.html">doces e sobremesas</a></li> 
+                    <li><a href="salgados.html">salgados</a></li> 
+                    <li><a href="massas.html">massas</a></li> 
+                    <li><a href="peixe-e-frutos-do-mar.html">peixe e frutos do mar</a></li> 
+                    <li class="dropdown"> 
+                        <a href="#">mais</a>
+                        <div class="dropdown-content">
+                            <a href="risoto.html">risoto</a>
+                            <a href="lanches-e-salgados.html">lanches e salgados</a>
+                            <a href="sopas.html">sopas</a>
+                            <a href="paes.html">pães</a>
+                       </div>                       
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <h1>Receitas de Aves</h1>
+        
+        <section id="frango-assado" class="receita">
+            <h2>Frango Assado com Ervas</h2>
+            <img src="images/frango-assado.jpg" alt="Frango Assado com Ervas">
+            <p>Uma deliciosa receita de frango assado com ervas frescas, ideal para um almoço em família.</p>
+            <p>Ingredientes:</p>
+            <ul>
+                <li>1 frango inteiro</li>
+                <li>Ervas frescas a gosto (salsinha, alecrim, tomilho)</li>
+                <li>Sal e pimenta a gosto</li>
+                <!-- Adicione mais ingredientes conforme necessário -->
+            </ul>
+            <p>Modo de preparo:</p>
+            <ol>
+                <li>Preaqueça o forno a 180°C.</li>
+                <li>Lave bem o frango e seque com papel toalha.</li>
+                <li>Tempere o frango com as ervas, sal e pimenta.</li>
+                <li>Leve ao forno por aproximadamente 1 hora ou até dourar.</li>
+                <!-- Adicione mais passos conforme necessário -->
+            </ol>
+        </section>
+
+        <section id="pato-laranja" class="receita">
+            <h2>Pato ao Molho de Laranja</h2>
+            <img src="images/pato-laranja.jpg" alt="Pato ao Molho de Laranja">
+            <p>Receita sofisticada de pato ao molho de laranja, perfeita para ocasiões especiais.</p>
+            <p>Ingredientes:</p>
+            <ul>
+                <li>1 pato inteiro</li>
+                <li>Suco de 4 laranjas</li>
+                <li>Mel a gosto</li>
+                <!-- Adicione mais ingredientes conforme necessário -->
+            </ul>
+            <p>Modo de preparo:</p>
+            <ol>
+                <li>Limpe bem o pato e tempere com sal.</li>
+                <li>Asse o pato em forno alto por 30 minutos.</li>
+                <li>Reduza a temperatura e adicione o suco de laranja e o mel.</li>
+                <li>Deixe assar por mais 1 hora ou até dourar.</li>
+                <!-- Adicione mais passos conforme necessário -->
+            </ol>
+        </section>
+
+        <section id="galinha-caipira" class="receita">
+            <h2>Galinha Caipira</h2>
+            <img src="images/galinha-caipira.jpg" alt="Galinha Caipira">
+            <p>Tradicional receita de galinha caipira com um sabor único e autêntico.</p>
+            <p>Ingredientes:</p>
+            <ul>
+                <li>1 galinha caipira</li>
+                <li>Temperos a gosto</li>
+                <li>Legumes variados</li>
+                <!-- Adicione mais ingredientes conforme necessário -->
+            </ul>
+            <p>Modo de preparo:</p>
+            <ol>
+                <li>Corte a galinha em pedaços e tempere com os temperos.</li>
+                <li>Refogue os legumes e adicione a galinha.</li>
+                <li>Cozinhe em fogo baixo por cerca de 1 hora.</li>
+                <!-- Adicione mais passos conforme necessário -->
+            </ol>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h2>Contato</h2>
+                    <p>Email: contato@receitasculinarias.com</p>
+                    <p>Telefone: (00) 1234-5678</p>
+                </div>
+                <div class="footer-section">
+                    <h2>Mapa do Site</h2>
+                    <ul>
+                        <li><a href="#">Início</a></li>
+                        <li><a href="#">Receitas</a></li>
+                        <li><a href="#">Sobre</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h2>Redes Sociais</h2>
+                    <ul class="social-icons">
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <input type="checkbox" id="back-to-top">
+        <label for="back-to-top" class="back-to-top">Voltar ao Topo</label>
+        <div class="footer-bottom">
+            &copy; 2024 SABORES | Todos os direitos reservados
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript para mostrar/ocultar as receitas ao clicar nos links
+        document.addEventListener("DOMContentLoaded", function() {
+            // Função para mostrar a receita correspondente ao clicar no link
+            function mostrarReceita(idReceita) {
+                // Oculta todas as receitas
+                var receitas = document.querySelectorAll('.receita');
+                receitas.forEach(function(receita) {
+                    receita.style.display = 'none';
+                });
+                // Mostra apenas a receita desejada
+                var receitaSelecionada = document.getElementById(idReceita);
+                if (receitaSelecionada) {
+                    receitaSelecionada.style.display = 'block';
+                }
+            }
+
+            // Event listeners para cada link de receita
+            document.getElementById('link-frango-assado').addEventListener('click', function(event) {
+                event.preventDefault(); // Evita a ação padrão do link
+                mostrarReceita('frango-assado');
+            });
+
+            document.getElementById('link-pato-laranja').addEventListener('click', function(event) {
+                event.preventDefault(); // Evita a ação padrão do link
+                mostrarReceita('pato-laranja');
+            });
+
+            document.getElementById('link-galinha-caipira').addEventListener('click', function(event) {
+                event.preventDefault(); // Evita a ação padrão do link
+                mostrarReceita('galinha-caipira');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <title>Bolos e tortas</title>
+    <link href="css/estilo.css" rel="stylesheet" type="text/css">
+    <link href="css/carnes.css" rel="stylesheet" type="text/css">
+    <link href="css/receitas.css" rel="stylesheet" type="text/css">
+    <link href="css/receita-detalhe.css" rel="stylesheet" type="text/css">
+    <link href="css/footer.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .receita-detalhe {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="cabecalho">
+            <div>
+                <img id="logotipo" src="images/sopas.webp"  alt="logotipo">
+            </div>
+            <div id="divBusca">
+                <input type="text" id="txtBusca" placeholder="Procure uma receita..."/>
+                <button type="submit" id="btnBusca">Procurar</button>
+            </div>
+        </div>
+        <div id="cabecalho2">
+            <div id="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li> 
+                    <li><a href="bolos-e-tortas.html">bolos e tortas</a></li> 
+                    <li><a href="carnes.html">carnes</a></li> 
+                    <li><a href="aves.html">aves</a></li> 
+                    <li><a href="doces-e-sobremesas.html">doces e sobremesas</a></li> 
+                    <li><a href="salgados.html">salgados</a></li> 
+                    <li><a href="massas.html">massas</a></li> 
+                    <li><a href="peixe-e-frutos-do-mar.html">peixe e frutos do mar</a></li> 
+                    <li class="dropdown">  
+                        <a href="#">mais &#x25BC</a>
+                        <div class="dropdown-content">
+                            <a href="risoto.html">risoto</a>
+                            <a href="lanches-e-salgados.html">lanches e salgados</a>
+                            <a href="sopas.html">sopas</a>
+                            <a href="paes.html">pães</a>
+                       </div>                       
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <section id="slider">
+        <div class="slider-container">
+            <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+            <div class="slides">
+                <img src="images/1.png" class="slide">
+                <img src="images/2.png" class="slide">
+                <img src="images/3.png" class="slide">
+                <img src="images/4.png" class="slide">
+                <img src="images/5.png" class="slide">
+                <img src="images/6.png" class="slide">
+            </div>
+            <button class="next" onclick="changeSlide(1)">&#10095;</button>
+        </div>
+    </section>
+
+    <section id="seccao-receitas">
+        <header>
+            <h1>Bolo de Chocolate</h1>
+        </header>
+        <div class="receitas-container">
+            <div class="receita" onclick="mostrarReceita('bolo-de-chocolate')">
+                <img src="images/bimg1.jpeg" alt="Bolo de Chocolate">
+                <h2>Bolo de Chocolate</h2>
+                <p>Uma receita deliciosa de bolo de chocolate que todos adoram.</p>
+            </div>
+            <div class="receita" onclick="mostrarReceita('macarrao-a-bolonhesa')">
+                <img src="images/bimg2.jpeg" alt="Macarrão à Bolonhesa">
+                <h2>Macarrão à Bolonhesa</h2>
+                <p>O clássico macarrão à bolonhesa para um almoço perfeito.</p>
+            </div>
+            <div class="receita" onclick="mostrarReceita('sorvete-de-morango')">
+                <img src="images/bimg3.jpeg" alt="Sorvete de Morango">
+                <h2>Sorvete de Morango</h2>
+                <p>Uma sobremesa refrescante e fácil de fazer.</p>
+            </div>
+            <div class="receita" onclick="mostrarReceita('salada-caesar')">
+                <img src="caminho/para/imagem4.jpg" alt="Salada Caesar">
+                <h2>Salada Caesar</h2>
+                <p>Uma salada leve e deliciosa para o verão.</p>
+            </div>
+            <!-- Continue com as outras receitas da mesma forma -->
+        </div>
+    </section>
+
+    <section id="bolo-de-chocolate" class="receita-detalhe">
+        <h1>Bolo de Chocolate</h1>
+        <img src="caminho/para/imagem1.jpg" alt="Bolo de Chocolate">
+        <p>Uma receita deliciosa de bolo de chocolate que todos adoram.</p>
+        <h2>Ingredientes</h2>
+        <ul>
+            <li>1 xícara de açúcar</li>
+            <li>2 xícaras de farinha de trigo</li>
+            <li>1 xícara de chocolate em pó</li>
+            <li>1 colher de sopa de fermento</li>
+            <li>3 ovos</li>
+            <li>1 xícara de leite</li>
+            <li>1/2 xícara de óleo</li>
+        </ul>
+        <h2>Modo de Preparo</h2>
+        <p>Preaqueça o forno a 180°C. Misture os ingredientes secos. Adicione os ovos, o leite e o óleo e misture bem. Despeje a massa em uma forma untada e asse por cerca de 40 minutos.</p>
+        <button onclick="voltarParaReceitas()">Voltar para receitas</button>
+    </section>
+
+    <section id="macarrao-a-bolonhesa" class="receita-detalhe">
+        <h1>Macarrão à Bolonhesa</h1>
+        <img src="caminho/para/imagem2.jpg" alt="Macarrão à Bolonhesa">
+        <p>O clássico macarrão à bolonhesa para um almoço perfeito.</p>
+        <h2>Ingredientes</h2>
+        <ul>
+            <li>500g de macarrão</li>
+            <li>400g de carne moída</li>
+            <li>1 lata de molho de tomate</li>
+            <li>1 cebola picada</li>
+            <li>2 dentes de alho picados</li>
+            <li>Sal e pimenta a gosto</li>
+            <li>Queijo ralado a gosto</li>
+        </ul>
+        <h2>Modo de Preparo</h2>
+        <p>Cozinhe o macarrão conforme as instruções da embalagem. Em uma panela, refogue a cebola e o alho, adicione a carne moída e cozinhe até dourar. Acrescente o molho de tomate e cozinhe por mais alguns minutos. Tempere com sal e pimenta. Misture o molho com o macarrão e sirva com queijo ralado.</p>
+        <button onclick="voltarParaReceitas()">Voltar para receitas</button>
+    </section>
+
+    <section id="sorvete-de-morango" class="receita-detalhe">
+        <h1>Sorvete de Morango</h1>
+        <img src="caminho/para/imagem3.jpg" alt="Sorvete de Morango">
+        <p>Uma sobremesa refrescante e fácil de fazer.</p>
+        <h2>Ingredientes</h2>
+        <ul>
+            <li>500g de morangos</li>
+            <li>1 lata de leite condensado</li>
+            <li>1 lata de creme de leite</li>
+            <li>Suco de 1 limão</li>
+        </ul>
+        <h2>Modo de Preparo</h2>
+        <p>Bata todos os ingredientes no liquidificador até obter uma mistura homogênea. Coloque em um recipiente e leve ao congelador por pelo menos 4 horas. Sirva gelado.</p>
+        <button onclick="voltarParaReceitas()">Voltar para receitas</button>
+    </section>
+
+    <section id="salada-caesar" class="receita-detalhe">
+        <h1>Salada Caesar</h1>
+        <img src="caminho/para/imagem4.jpg" alt="Salada Caesar">
+        <p>Uma salada leve e deliciosa para o verão.</p>
+        <h2>Ingredientes</h2>
+        <ul>
+            <li>1 alface romana</li>
+            <li>1 peito de frango grelhado</li>
+            <li>Queijo parmesão ralado</li>
+            <li>Croutons</li>
+            <li>Molho Caesar</li>
+        </ul>
+        <h2>Modo de Preparo</h2>
+        <p>Corte o frango em tiras. Em uma tigela, misture a alface com o frango, os croutons e o queijo parmesão. Adicione o molho Caesar e misture bem. Sirva imediatamente.</p>
+        <button onclick="voltarParaReceitas()">Voltar para receitas</button>
+    </section>
+
+    <footer>
+        <div class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h2>Contato</h2>
+                    <p>Email: contato@sabores.com</p>
+                    <p>Telefone: (11) 1234-5678</p>
+                </div>
+                <div class="footer-section">
+                    <h2>Mapa do site</h2>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Receitas</a></li>
+                        <li><a href="#">Sobre</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h2>Redes Sociais</h2>
+                    <ul class="social-icons">
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            &copy; 2024 SABORES | Todos os direitos reservados
+        </div>
+    </footer>
+
+    <script>
+        function mostrarReceita(id) {
+            
+            var receitas = document.querySelectorAll('.receita-detalhe');
+            receitas.forEach(function(receita) {
+                receita.style.display = 'none';
+            });
+            
+            var receita = document.getElementById(id);
+            receita.style.display = 'block';
+            
+            document.getElementById('seccao-receitas').style.display = 'none';
+        }
+
+        function voltarParaReceitas() {
+            
+            document.getElementById('seccao-receitas').style.display = 'block';
+            
+            var receitas = document.querySelectorAll('.receita-detalhe');
+            receitas.forEach(function(receita) {
+                receita.style.display = 'none';
+            });
+        }
+    </script>
+</body>
+</html>

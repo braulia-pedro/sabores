@@ -1,0 +1,303 @@
+
+
+#logotipo{
+    width:100px;
+    height: 90px;
+}
+
+#cabecalho{
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+#cabecalho div a {
+    color: white;
+    margin-right: 10px;
+}
+
+#divBusca{
+    display: flex;
+    align-items: center;
+    margin:0 90px 0 0;
+    
+  }
+
+#btnBusca {
+    padding:18px 15px;
+    background-color:#f77e3d;
+    border:none;
+    color: #ffffff; 
+    border-radius:0 25px 25px 0;
+    font-weight:bold;
+    font-family:Baskerville;
+  }
+  #btnBusca:hover{
+    background-color:rgb(250, 98, 43);
+    box-shadow: 0 0 8px 1px #f77e3d;
+  }
+
+  #txtBusca {
+    background-color:white;
+    border-radius:25px 0 0 25px;
+    font-size:18px;
+    border:none;
+    width:450px;
+    box-shadow: 0 0 8px 1px #f77e3d;
+    padding:15px;
+}
+
+  #txtBusca:focus {
+    outline: none; 
+}
+
+.login-button {
+   position: relative;
+   display: flex;
+   align-items: center;
+   padding: 10px 20px;
+    color: white; /* Cor do texto */
+   border: none; /* Remover bordas */
+   border-radius: 5px; /* Bordas arredondadas */
+   font-size: 16px; /* Tamanho do texto */
+   cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+   transition: background-color 0.3s; /* Transição suave ao passar o mouse */
+   margin-left: 10px; /* Espaço entre o botão de busca e o botão de login */
+  border-radius:50px 50px 50px 50px;
+  background-color: rgb(250, 98, 43); /* Cor de fundo do botão */
+}
+
+.login-button i {
+  margin-right: 10px; /* Espaço entre o ícone e o texto */
+}
+
+.login-button:hover {
+  background-color: rgb(223, 76, 23); /* Cor de fundo ao passar o mouse */
+}
+
+.login-button .submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #f7ebe4;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  width: 160px; /* Largura do submenu */
+}
+
+.login-button:hover .submenu {
+  display: block;
+}
+
+.submenu a {
+  display: block;
+  padding: 10px 20px;
+  color: black;
+  text-decoration: none;
+  transition: background-color 0.3s; 
+}
+
+.submenu a:hover {
+  background-color: rgb(223, 76, 23); 
+}
+
+@media (max-width: 768px) {
+  #cabecalho {
+      flex-direction: column; 
+      align-items: center; 
+      padding: 10px;
+  }
+
+  #divBusca {
+      flex-direction: column;
+      align-items: center; 
+      width: 100%;
+  }
+
+  #txtBusca {
+      width: 100%; 
+      margin-bottom: 10px; 
+  }
+
+  #btnBusca {
+      width: 100%; 
+      margin-left: 0; 
+  }
+
+  .login-button {
+      width: 100%; 
+      margin: 10px 0; /* Espaço acima e abaixo do botão */
+      justify-content: center; 
+  }
+
+  .login-button i {
+      margin-right: 0; /* Remove espaço entre o ícone e o texto */
+  }
+
+  .login-button .submenu {
+      position: static;
+      display: none; 
+      width: 100%; /* Ocupa toda a largura disponível */
+      box-shadow: none; /* Remove sombra */
+  }
+
+  .login-button:hover .submenu {
+      display: block; /* Exibe o submenu ao passar o mouse */
+  }
+}
+
+
+#cabecalho2{
+    display: flex;
+    justify-content: space-between;
+}
+
+#menu{
+    margin-right: 40px; /* Cria uma margem a direita de 40px */
+}
+#menu li{
+    display: inline;
+    margin-right: 30px;
+}
+
+#menu ul li a{
+    text-decoration: none;
+    padding: 6px;
+    color: #f97f3d;
+}
+
+#menu ul li a:hover{
+    padding-bottom: 10px;
+    background-color: #fa7933;
+    border-radius: 50px 50px 50px 50px;
+    color: white;
+}
+
+.dropbtn {
+    background-color: transparent;
+    color:  #f97f3d;
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+    font-family:Baskerville;
+    font-size:18px;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f7efe4;
+    top: 100%; 
+    min-width: 160px;
+    top: 100%;
+
+    left: 0px;
+    z-index: 1;
+
+  }
+  
+  .dropdown-content a {
+    color: #f97f3d; 
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color:#f97f3d; color:white;border-radius: 50px 50px 50px 50px;}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+    border-radius: 25px 25px 25px 25px;
+  }
+  
+  .dropdown:hover .dropbtn {
+    background-color:#fa7933;
+    border-radius: 50px 50px 50px 50px;
+    color: white;
+  }
+body{font-family:Baskerville;
+    font-size:18px;
+  }
+
+/* Estilo para o container de receitas */
+main {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+main h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+article {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 15px;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+article h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+article img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+article p {
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+article a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+article a:hover {
+    background-color: #0056b3;
+}
+#topo{
+  text-decoration: none;
+  color: white;
+  background-color:#f56f27;
+  padding: 9px;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  box-shadow: 3px 3px 10px #69625d;
+
+}
+section {
+  margin-bottom: 40px; /* Ajuste o valor conforme necessário */
+}

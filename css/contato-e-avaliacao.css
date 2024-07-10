@@ -1,0 +1,75 @@
+/* Estilos para a seção de contato e avaliação */
+#contato-e-avaliacao {
+    padding: 20px;
+    background-color:  #fbf5f0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+#contato-e-avaliacao h2 {
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    color: #f97f3d;
+}
+
+.email-form, .avaliacao-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.email-form input, .email-form textarea, .avaliacao-form button {
+    width: 80%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.email-form textarea {
+    height: 100px;
+}
+
+.email-form button, .avaliacao-form button {
+    background-color: #f97f3d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.email-form button:hover, .avaliacao-form button:hover {
+    
+    box-shadow: 0 0 8px 1px #f78345;
+}
+
+.estrelas {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.estrelas input[type="radio"] {
+    display: none;
+}
+
+.estrelas label {
+    font-size: 2em;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.estrelas input[type="radio"]:checked ~ label,
+.estrelas input[type="radio"]:checked + label ~ label {
+    color: #f97f3d;
+ 
+}
+
+.estrelas input[type="radio"]:not(:checked) + label:hover,
+.estrelas input[type="radio"]:not(:checked) + label:hover ~ label {
+    color: #f97f3d;
+}
