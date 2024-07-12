@@ -4,10 +4,10 @@
 <head>
     <title>Home</title>
     <link href="css/estilo.css" rel="stylesheet" type="text/css">
-    <link href="css/banner.css" rel="stylesheet" type="text/css">
+    <link href="css/wrapper.css" rel="stylesheet" type="text/css">
     <link href="css/receitas.css" rel="stylesheet" type="text/css">
-    <link href="css/contato-e-avaliacao.css" rel="stylesheet" type="text/css"> 
-    <link href="css/footer.css" rel="stylesheet" type="text/css">
+    <link href="css/contato-e-avaliacao.css" rel="stylesheet" type="text/css">
+    <link href="css/footer.css" rel="stylesheet" type="text/css"> 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
@@ -21,7 +21,13 @@
 
             <div id="divBusca">
                 <input type="text" id="txtBusca" placeholder="Procure uma receita..."/>
-                <button type="submit" id="btnBusca">Procurar</button>
+                <button type="submit" id="btnBusca">Procurar
+                    <svg role="img" class="u-icon u-icon-loupe" viewBox="0 0 20 20">
+                        <title>Icone loupe</title>
+                        <circle cx="8" cy="8" r="7" stroke="white" stroke-width="2" fill="none"></circle>
+                        <line x1="12" y1="12" x2="18" y2="18" stroke="white" stroke-width="2"></line>
+                    </svg>
+                </button>    
             </div>
 
             <button class="login-button">
@@ -36,6 +42,11 @@
         </div>
      
         <div id="cabecalho2">
+            <div class="hamburger" id="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
             <div id="menu">
                 <ul>
                     <li><a href="bolos-e-tortas.html">bolos e tortas</a></li> 
@@ -45,35 +56,103 @@
                     <li><a href="salgados.html">salgados</a></li> 
                     <li><a href="massas.html">massas</a></li> 
                     <li><a href="peixe-e-frutos-do-mar.html">peixe e frutos do mar</a></li> 
-                    <li class="dropdown">  
-                        <a href="#">mais &#x25BC</a>
-                        <div class="dropdown-content">
-                            <a href="risoto.html">risoto</a>
-                            <a href="lanches-e-salgados.html">lanches e salgados</a>
-                            <a href="sopas.html">sopas</a>
-                            <a href="paes.html">pães</a>
-                       </div>                       
-                    </li>
+                    <li><a href="peixe-e-frutos-do-mar.html">pães</a></li>
+                    <li><a href="peixe-e-frutos-do-mar.html">sopas</a></li>
+
                 </ul>
             </div>
         </div>
     </header>
 
-    <div class="banner">
-        <div class="images">
-            <img src="images/img1.jpeg" class="active" alt="pic1">
-            <img src="images/img4.webp" alt="pic2">
-            <img src="images/img3.webp" alt="pic3">
-            <img src="images/img9.jpg" alt="pic6">
+    <script>
+        document.getElementById('btnBusca').addEventListener('click', function() {
+            var searchBox = document.getElementById('txtBusca');
+            if (searchBox.style.display === 'none' || searchBox.style.display === '') {
+                searchBox.style.display = 'block';
+                searchBox.focus(); // Foca na caixa de texto quando ela aparece
+            } else {
+                searchBox.style.display = 'none';
+            }
+        });
+    </script>
 
+
+    <div class="wrapper">
+        <div class="slide-wrapper" data-slide="wrapper">
+            <button class="slide-nav-button slide-nav-previous fas fa-chevron-left" data-slide="nav-previous-button"></button>
+            <button class="slide-nav-button slide-nav-next fas fa-chevron-right" data-slide="nav-next-button"></button>
+            <div class="slide-list" data-slide="list">
+                <div class="slide-item" data-slide="item" data-index="0">
+                    <div class="slide-content">
+                        <img class="slide-image" src="images/img1.jpeg" alt="Assassin's Creed" />
+                        <div class="slide-description">
+                            <p>Lasanha de carne moída</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-item" data-slide="item" data-index="1">
+                    <div class="slide-content">
+                        <img class="slide-image" src="images/img4.webp" alt="Fortnite" />
+                        <div class="slide-description">
+                            <p>Bolo de chocolate com recheio de brigadeiro</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-item" data-slide="item" data-index="2">
+                    <div class="slide-content">
+                        <img class="slide-image" src="images/img3.webp" alt="Freefire" />
+                        <div class="slide-description">
+                            <p>Escodidinho de carne</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-item" data-slide="item" data-index="3">
+                    <div class="slide-content">
+                        <img class="slide-image" src="images/img9.jpg" alt="GTA V" />
+                        <div class="slide-description">
+                            <p>Bolo de ginguba com recheio</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-item" data-slide="item" data-index="4">
+                    <div class="slide-content">
+                        <img class="slide-image" src="images/bimg1.jpeg" alt="Halo 5" />
+                        <div class="slide-description">
+                            <p>Bolo marmore</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-item" data-slide="item" data-index="5">
+                    <div class="slide-content">
+                        <img class="slide-image" src="images/img7.webp" alt="League of Legends" />
+                        <div class="slide-description">
+                            <p>Mousse de maracujá</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-item" data-slide="item" data-index="6">
+                    <div class="slide-content">
+                        <img class="slide-image" src="images/img4.jpeg" alt="Red Dead Redemption 2" />
+                        <div class="slide-description">
+                            <p>Peixe</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="slide-controls" data-slide="controls-wrapper">
+                
+            </div>
         </div>
-        <div class="dots">
-            <span class="dot active" data-slide="0"></span>
-            <span class="dot" data-slide="1"></span>
-            <span class="dot" data-slide="2"></span>
-            <span class="dot" data-slide="3"></span>
-        </div> 
     </div>
+    <script src="js/slidess.js"></script>
+    <script>
+        initSlider({
+            autoPlay: true,
+            startAtIndex: 0,
+            timeInterval: 2000
+        })
+    </script>
 
     <section id="seccao-receitas">
         <header>
@@ -190,8 +269,8 @@
             &copy; 2024 SABORES | Todos os direitos reservados
         </div>
     </footer>
-
+    <script src="js/scrips.js"></script>
    <script src="js/scripts.js"></script>
-   <script src="js/slider.js"></script> 
+
 </body>
 </html>

@@ -1,5 +1,3 @@
-
-
 #logotipo{
     width:100px;
     height: 90px;
@@ -52,9 +50,62 @@
 
   #txtBusca:focus {
     outline: none; 
+ }
+ .u-icon-loupe {
+  width: 18px;
+  height: 18px;
+  fill: white;
+  margin-right: 5px;
+  display:none;
+}
+
+
+@media (max-width: 1024px) {
+  #txtBusca {
+      width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  #cabecalho {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+
+  #divBusca {
+    margin: 0;
+    width: 100%;
+    justify-content: center;
+ }
+
+ .u-icon-loupe { 
+  width: 18px;
+  height: 18px;
+  fill: white;
+  margin-right: 5px;
+ }
+
+ #txtBusca {
+  width: 80%;
+  margin-bottom: 10px;
+  border-radius: 25px;
+  box-shadow: 0 0 8px 1px #f77e3d;
+  padding: 15px;
+}
+
+#btnBusca {
+  width: auto;
+  padding: 15px;
+  border-radius: 25px;
+  box-shadow: 0 0 8px 1px #f77e3d;
+
+
+}
 }
 
 .login-button {
+
    position: relative;
    display: flex;
    align-items: center;
@@ -66,8 +117,8 @@
    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
    transition: background-color 0.3s; /* Transição suave ao passar o mouse */
    margin-left: 10px; /* Espaço entre o botão de busca e o botão de login */
-  border-radius:50px 50px 50px 50px;
-  background-color: rgb(250, 98, 43); /* Cor de fundo do botão */
+   border-radius:50px 50px 50px 50px;
+   background-color: rgb(250, 98, 43); /* Cor de fundo do botão */
 }
 
 .login-button i {
@@ -83,7 +134,7 @@
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #f7ebe4;
+  background-color: #f7efe4;;
   border: 1px solid #ddd;
   border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -98,13 +149,14 @@
 .submenu a {
   display: block;
   padding: 10px 20px;
-  color: black;
+  color: #f97f3d !important;
   text-decoration: none;
-  transition: background-color 0.3s; 
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .submenu a:hover {
-  background-color: rgb(223, 76, 23); 
+  background-color: rgb(223, 76, 23);
+  color: white!important; 
 }
 
 @media (max-width: 768px) {
@@ -131,25 +183,39 @@
   }
 
   .login-button {
+    width: 35px; 
+    height: 40px;
+    border-radius: 55%;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; 
+    margin: 10px 0; 
+    text-indent: 100%; 
+    white-space: nowrap; 
+    transition: width 0.3s ease; 
+  }
+
+    .login-button i {
+      margin-left: 20px; 
+      font-size: 15px; 
+    }
+  
+    .login-button .submenu {
+      position: absolute;
+      top: 100%; 
+      right: 0;
+      z-index: 1; 
+      display: none;
       width: 100%; 
-      margin: 10px 0; /* Espaço acima e abaixo do botão */
-      justify-content: center; 
-  }
+      box-shadow: none; 
+    }
 
-  .login-button i {
-      margin-right: 0; /* Remove espaço entre o ícone e o texto */
-  }
-
-  .login-button .submenu {
-      position: static;
-      display: none; 
-      width: 100%; /* Ocupa toda a largura disponível */
-      box-shadow: none; /* Remove sombra */
-  }
-
-  .login-button:hover .submenu {
-      display: block; /* Exibe o submenu ao passar o mouse */
-  }
+    .login-button:hover .submenu {
+      display: block; 
+    }
+  
 }
 
 
@@ -159,7 +225,7 @@
 }
 
 #menu{
-    margin-right: 40px; /* Cria uma margem a direita de 40px */
+    margin-right: 10px;
 }
 #menu li{
     display: inline;
@@ -178,6 +244,49 @@
     border-radius: 50px 50px 50px 50px;
     color: white;
 }
+
+#menu ul li {
+  display: inline;
+  margin-right: 10px; 
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+
+}
+
+.bar {
+  height: 3px;
+  width: 25px;
+  background-color: rgb(245, 120, 43);
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+@media (max-width: 768px) {
+  #menu ul {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+  }
+
+  #menu ul li {
+      text-align: center;
+      margin: 10px 0;
+  }
+
+  #menu ul.show {
+      display: flex;
+  }
+
+  .hamburger {
+      display: flex;
+      
+  }
+}
+
 
 .dropbtn {
     background-color: transparent;
@@ -204,7 +313,8 @@
 
     left: 0px;
     z-index: 1;
-
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   
   .dropdown-content a {
@@ -214,11 +324,11 @@
     display: block;
   }
   
-  .dropdown-content a:hover {background-color:#f97f3d; color:white;border-radius: 50px 50px 50px 50px;}
+  .dropdown-content a:hover {background-color:#f97f3d; color:white;border-radius: 5px;}
   
   .dropdown:hover .dropdown-content {
     display: block;
-    border-radius: 25px 25px 25px 25px;
+ 
   }
   
   .dropdown:hover .dropbtn {
@@ -226,6 +336,26 @@
     border-radius: 50px 50px 50px 50px;
     color: white;
   }
+
+  @media (max-width: 768px) {
+    .dropdown {
+        display: block;
+        margin-bottom: 10px; /* Espaçamento entre os itens do menu */
+    }
+
+    .dropdown-content {
+        position: static;
+        display: none;
+        width: auto;
+        margin-top: 5px; /* Espaçamento acima do submenu */
+        box-shadow: none;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+}
+
 body{font-family:Baskerville;
     font-size:18px;
   }
